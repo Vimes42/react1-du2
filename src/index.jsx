@@ -1,7 +1,14 @@
 import { createRoot } from 'react-dom/client';
-import { HomePage } from './pages/HomePage';
 import './global.css';
+import Header from './pages/components/Header/Header';
+import Dashboard from './pages/components/Dashboard/Dashboard';
+import smartHomeData from './smartHomeData';
 
 createRoot(
   document.querySelector('#app'),
-).render(<HomePage />);
+).render(
+  <div className="container">
+    <Header title="Chytrý dům"/>
+    <Dashboard data={smartHomeData}/>
+  </div>
+);
