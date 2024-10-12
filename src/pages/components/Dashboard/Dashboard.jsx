@@ -9,7 +9,7 @@ const Dashboard = ({data}) => (
         <Lights lights={data.lights}/>
         <Climate temperature={data.climate.temperature} humidity={data.climate.humidity}/>
         <Blinds state={data.state}/>
-        <Energy />
+        <Energy electricity={data.energyConsumption.electricity} water={data.energyConsumption.water} />
     </main>
 )
 
