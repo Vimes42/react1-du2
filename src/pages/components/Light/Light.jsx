@@ -6,9 +6,9 @@ import './Light.css';
 const Light = ({name, state}) => {
     const [stateLights, setStateLights] = useState({state});
     
-    return (<div className="light" onClick={_ => setStateLights( !stateLights )}>
+    return (<div className="light" onClick={_ => setStateLights( stateLights === "on" ? "off" : "on" )}>
                 <div className="light__icon">
-                    <img src={stateLights ? lighton : lightoff} />
+                    <img src={stateLights === "on" ? lighton : lightoff} />
                 </div>
                 <div className="light__name">
                     {name}
