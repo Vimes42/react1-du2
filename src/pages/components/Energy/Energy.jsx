@@ -1,4 +1,4 @@
-import './Energy.jsx';
+import './Energy.css';
 
 const Energy = () => (
 			<div className="energy">

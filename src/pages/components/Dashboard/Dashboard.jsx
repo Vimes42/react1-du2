@@ -6,7 +6,7 @@ import Energy from '../Energy/Energy';
 
 const Dashboard = ({data}) => (
     <main className="dashboard">
-        <Lights />
+        <Lights lights={data.lights}/>
         <Climate />
         <Blinds />
         <Energy />
