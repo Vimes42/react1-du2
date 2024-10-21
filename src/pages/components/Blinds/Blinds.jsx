@@ -4,7 +4,7 @@ import open from './images/blinds-open.svg';
 import closed from './images/blinds-closed.svg';
 
 const Blinds = ({ state }) => {
-	const [blindsState, setBlindsState] = useState({state});
+	const [blindsState, setBlindsState] = useState(state);
 	
 	return (
 			<div className="blinds">
@@ -15,8 +15,8 @@ const Blinds = ({ state }) => {
 					Žaluzie
 				</div>
 				<div className="blinds__controls">
-					<button className={ blindsState === "open" ? "button button--active" : "button"} onClick={_ => setBlindsState('closed')}>Otevřeno</button> 
-					<button className={ blindsState === "closed" ? "button button--active" : "button"} onClick={_ => setBlindsState('open')}>Zavřeno</button>
+					<button className={ blindsState === "open" ? "button button--active" : "button"} onClick={_ => setBlindsState('open')}>Otevřeno</button> 
+					<button className={ blindsState === "closed" ? "button button--active" : "button"} onClick={_ => setBlindsState('closed')}>Zavřeno</button>
 				</div>
 			</div>
 );}

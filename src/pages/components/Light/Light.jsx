@@ -4,7 +4,7 @@ import React, {useState} from 'react';
 import './Light.css';
 
 const Light = ({name, state}) => {
-    const [stateLights, setStateLights] = useState({state});
+    const [stateLights, setStateLights] = useState(state);
     
     return (<div className="light" onClick={_ => setStateLights( stateLights === "on" ? "off" : "on" )}>
                 <div className="light__icon">
